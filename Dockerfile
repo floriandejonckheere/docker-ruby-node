@@ -1,8 +1,8 @@
-FROM ruby:2.6.5-alpine
+FROM ruby:2.7.1-alpine
 
 MAINTAINER Florian Dejonckheere <florian@floriandejonckheere.be>
 
-ENV NODE_VERSION 13.1.0
+ENV NODE_VERSION 13.12.0
 
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
@@ -14,7 +14,7 @@ RUN addgroup -g 1000 node \
       && case "${alpineArch##*-}" in \
         x86_64) \
           ARCH='x64' \
-          CHECKSUM="57cc9f7282e67c69b2ee986c71a490bc8750d426f04d458d20debde554a19505" \
+          CHECKSUM="2be1914d44aafdb6d0b41b8f78eb19dc7cbec21738e1f06d37ac2d06405c260f" \
           ;; \
         *) ;; \
       esac \
